@@ -14,7 +14,7 @@ A minimal, dependency-free Rust crate for snapshot testing. `snappy` allows you 
 Install the `snappy` binary directly from GitHub, pinning to the `v0.1.0` tag:
 
 ```bash
-cargo install --git https://github.com/copiumnicus/snap --tag v0.1.0
+cargo install --git https://github.com/copiumnicus/snappy --tag v0.1.0
 ```
 
 ## Usage
@@ -25,7 +25,7 @@ Add `snappy` to your `Cargo.toml`, specifying the `v0.1.0` tag to pin the depend
 
 ```toml
 [dependencies]
-snappy = { git = "https://github.com/copiumnicus/snap", tag = "v0.1.0" }
+snappy = { git = "https://github.com/copiumnicus/snappy", tag = "v0.1.0" }
 ```
 
 ### Using the `snap` Function in Tests
