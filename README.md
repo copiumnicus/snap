@@ -11,24 +11,24 @@ A minimal, dependency-free Rust crate for snapshot testing. `snappy` allows you 
 
 ## Installation
 
-Install the `snappy` binary directly from GitHub:
+Install the `snappy` binary directly from GitHub, pinning to the `v0.1.0` tag:
 
 ```bash
-cargo install --git https://github.com/copiumnicus/snap
+cargo install --git https://github.com/copiumnicus/snap --tag v0.1.0
 ```
 
 ## Usage
 
 ### Adding `snappy` as a Dependency
 
-Add `snappy` to your `Cargo.toml`:
+Add `snappy` to your `Cargo.toml`, specifying the `v0.1.0` tag to pin the dependency:
 
 ```toml
 [dependencies]
-snappy = { git = "https://github.com/copiumnicus/snap" }
+snappy = { git = "https://github.com/copiumnicus/snap", tag = "v0.1.0" }
 ```
 
-### Using the `snappy` Function in Tests
+### Using the `snap` Function in Tests
 
 ```rust
 use snappy::snap;
@@ -36,11 +36,11 @@ use snappy::snap;
 #[test]
 fn test_example_output() {
     let output = your_function_to_test();
-    snappy("example_output", output);
+    snap("example_output", output);
 }
 ```
 
-### Reviewing Snapshots with `snapshot_tool`
+### Reviewing Snapshots with `snappy`
 
 After running your tests, review and manage snapshots:
 
@@ -51,3 +51,7 @@ snappy
 - **Approve**: Accept the new snapshot.
 - **Reject**: Discard the changes.
 - **Skip**: Review later.
+
+## License
+
+Licensed under the [MIT License](LICENSE).
